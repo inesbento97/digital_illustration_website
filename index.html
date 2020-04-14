@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+  <title>Estrutura</title>
+  <meta name="discription" content="HTML tutorial">
+  <meta name="keywords"
+  content="HTML,CSS,XML,JavaScript">
+  <metaname="author" content="Inês Bento">
+  <meta http-equiv="refresh" content="30">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css\style.css">
+
+
+  </head>
+  <!---Content starts here -->
+  <body>
+    <header>
+
+<a id="menu_icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z" fill="white"/>
+  </svg>
+</a>
+
+
+<div id="drawer">
+      <nav>
+        <a href="#unordered"> Different types of illustration</a>
+        <a href="#ordered"> Meaning</a>
+        <a href="#color"> Inspiration</a>
+        <a href="#video"> Illustration tutorial video</a>
+        <a href="#table"> Softwares</a>
+        </nav>
+      </div>
+
+
+      <h1>Digital Illustration</h1>
+      <p> Digital illustration is any type of illustration made digitally, on the computer, using software. </p>
+
+
+
+    </header>
+
+    <nav id="tabletPC" class="col-3">
+      <a href="#unordered"> Different types of illustration</a>
+      <br />
+      <a href="#ordered"> Meaning</a>
+      <br />
+      <a href="#color"> Inspiration</a>
+      <br />
+      <a href="#video"> Illustration tutorial video</a>
+      <br />
+      <a href="#table"> Softwares</a>
+      </nav>
+
+<div id="container" class="col-9">
+<section class="slideshow-container">
+<h2>Illustration Slideshow</h2>
+<article class="mySlides" class="fade">
+<figure>
+<img src="images/img1.jpg">
+<figcaption>Figure 1: Fashion Illustration</figcaption>
+</figure>
+</article>
+
+<article>
+<article class="mySlides" class="fade">
+<figure>
+<img src="images/img2.jpg">
+<figcaption>Figure 2: Nature Illustration</figcaption>
+</figure>
+</article>
+
+<article>
+<article class="mySlides" class="fade">
+<figure>
+<img src="images/img3.jpg">
+<figcaption>Figure 3: Landscape Illustration</figcaption>
+</figure>
+</article>
+
+<div class="dotpoints">
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</section>
+
+      <section>
+      <a name="unordered">
+      <h2> Different types of illustration </h2>
+      <i> Digital illustration can be done in several ways:</i>
+      <ul>
+      <li> 2D </li>
+      <li> 3D </li>
+      <li> Interactive </li>
+      <li> Projected </li>
+      </section>
+
+      <section>
+      <a name="ordered">
+      <h2> Meaning </h2>
+      <i> i-llus-tra-tion </i>
+      <ol>
+      <li><u> Artistic part of a text </u></li>
+      <li><u> Engraving, drawing, image or reproduction </u></li>
+      <li><u> Act or effect of illustrating </u></li>
+      </ol>
+     </section>
+
+     <section>
+      <h2>Inspiration</h2>
+      <a name="color">
+      <p> Some good visual culture. </p>
+      <img src = "https://i.pinimg.com/originals/37/97/de/3797de402f0e2f2c27f74470f148e284.gif" width="1000" height="auto">
+      <img src = "images/image1.png" width="900" height="auto">
+      <img src = "images/image2.jpg"  width="900" height="auto">
+      <img src = "images/image3.jpg" width="900" height="auto">
+      <img src = "images/image4.jpg" width="900" height="auto">
+
+      </section>
+
+      <section>
+      <a name="video">
+      <h2>Illustration tutorial video</h2>
+      <p> Learn some good skills </p>
+      <iframe width="900" height="480"
+      src="https://www.youtube.com/embed/l0W2e1mGntQ"
+      frameborder="0"
+      gesture="media"
+      allow="encrypted-media"
+      allowfullscreen>
+      </iframe>
+      </section>
+
+      <section>
+      <a name="table">
+      <table border="1px" width="100%" height="auto">
+      <th colspan="3"> Softwares </th>
+      <tr>
+      <td> Adobe Illustrator </td> <td> Abobe Fireworks </td> <td> Adobe Photoshop </td>
+      </tr>
+      </table>
+    </section>
+</div>
+    <aside class="col-2">
+      <h3>Share your work with us</h3>
+      <p>Facebook: Digital Illustration
+      </p>
+      <p>Instagram: @digital_illustration
+      </p>
+    </aside>
+    <footer>
+      <h2>Developed by Inês Bento</h2>
+    </footer>
+
+    <script>
+let slideIndex = 0;
+showSlides();
+function showSlides() {
+let i = null;
+let slides = document.getElementsByClassName("mySlides");
+let dots = document.getElementsByClassName("dot");
+for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";
+}
+slideIndex++;
+if (slideIndex> slides.length) {slideIndex = 1}
+for (i = 0; i < dots.length; i++) {
+dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+
+let menu_icon = document.querySelector('#menu_icon');
+let container = document.querySelector("#container");
+let drawer = document.querySelector('#drawer');
+
+menu_icon.addEventListener('click', function (e) {
+drawer.classList.toggle('open');
+e.stopPropagation();
+});
+container.addEventListener('click', function () {
+drawer.classList.remove('open');
+});
+
+</script>
+
+  </body>
+    <!---Content ends here -->
+  </html>
